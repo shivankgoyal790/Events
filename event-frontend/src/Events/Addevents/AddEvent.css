@@ -1,0 +1,17 @@
+.addbtn{
+    width: 60px;
+    height: 60px;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    position: fixed;
+    z-index: 103;
+    color: #fff;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+    background-color: #43c6ac;
+    border: none;
+    border-radius: 50%;
+   
+}

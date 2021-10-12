@@ -1,0 +1,45 @@
+.neweventbtn{
+        padding : 6px 14px;
+        color: white;
+        background-color: #43c6ac;
+        border: none;
+        outline: none;
+}
+
+.addeventcontainer{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.eventbox{
+        display: flex;
+        width: 25%;
+        flex-direction: column;
+        border: 1px solid #43c6ac;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+
+}
+
+.form-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+width: 90%;
+
+}
+
+.form-container > input{
+ width: 100%;
+ padding: 10px 6px;
+}
+
+label{
+        margin-top: 5px;
+}
