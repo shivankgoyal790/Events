@@ -1,1 +1,1 @@
-![front page](Screenshot (452).png)?raw=true "frontend UI"
+![frontpage](Screenshot (452).png)
