@@ -8,7 +8,7 @@ const Newevent = () =>{
     const[Newvalue,setnewvalue] = useState({title: "",date:"" ,time:"" ,location :"" , image :undefined});
     const History = useHistory();
     
-    const inputimagehandler = useCallback((value) => {
+    const inputimagehandler = useCallback((value) => {  // input validation of image
         setnewvalue((prev)=>{
 
             return{
@@ -23,7 +23,7 @@ const Newevent = () =>{
         );
     },[])
 
-    const InputHandler = (event) =>{
+    const InputHandler = (event) =>{     // input validation
         const name = event.target.name;
         const value = event.target.value;
         setnewvalue((prev) =>{
@@ -65,7 +65,7 @@ const Newevent = () =>{
     const Addeventhandler = async (event) =>{
         event.preventDefault();
         try{
-            const formdata = new FormData();
+            const formdata = new FormData();            //using form data instead of json because of image upload to get path
             formdata.append('title',Newvalue.title);
             formdata.append('date',Newvalue.date);
             formdata.append('image',Newvalue.image);
@@ -80,7 +80,7 @@ const Newevent = () =>{
         if(!response.ok){
             throw new Error(responsedata.message);
         }
-        History.push('/');
+        History.push('/');    //reload the page
         }catch(err){
             console.log(err || "cannot create event");
         }

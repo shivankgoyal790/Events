@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import "./Imageupload.css"
 const Imageupload = (props) =>{
     const [newfile, setnewfile] = useState();
-    const filePickerRef = useRef();
+    const filePickerRef = useRef();  //get reference to input
     
     
     const pickedHandler = (event) =>{
@@ -18,9 +18,9 @@ const Imageupload = (props) =>{
       if (!newfile) {
         return;
       }
-      const fileReader = new FileReader();
+      const fileReader = new FileReader();   // browser api to read file path asynchronously
       fileReader.readAsDataURL(newfile);
-    }, [newfile]);
+    }, [newfile]);      
   
     const pickImageHandler = () => {
       filePickerRef.current.click();
